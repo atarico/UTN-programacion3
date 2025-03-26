@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./tablas.html">Tablas</a></li>
+                <li><a href="./multimedia.html">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Ejemplo 3: Formularios completos -->
+    <section>
+        <h2>Formulario de registro</h2>
+        <form method="post">
+            <fieldset>
+                <legend>Datos personales</legend>
+
+                <div>
+                    <label for="nombreRegistro">Nombre:</label>
+                    <input type="text" id="nombreRegistro" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div>
+                    <label for="apellidoRegistro">Apellido:</label>
+                    <input type="text" id="apellidoRegistro" name="apellido" placeholder="Tu apellido" required>
+                </div>
+
+                <div>
+                    <label for="emailRegistro">Email:</label>
+                    <input type="email" id="emailRegistro" name="email" placeholder="tu@email.com" required>
+                </div>
+
+                <div>
+                    <label for="passwordRegistro">Contraseña:</label>
+                    <input type="password" id="passwordRegistro" name="password" required>
+                </div>
+
+                <div>
+                    <label for="nacimientoRegistro">Fecha de nacimiento:</label>
+                    <input type="date" id="nacimientoRegistro" name="nacimiento">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferencias</legend>
+
+                <div>
+                    <p>Género:</p>
+                    <input type="radio" id="masculino" name="genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+
+                    <input type="radio" id="femenino" name="genero" value="femenino">
+                    <label for="femenino">Femenino</label>
+
+                    <input type="radio" id="otro" name="genero" value="otro">
+                    <label for="otro">Otro</label>
+                </div>
+
+                <div>
+                    <p>Intereses:</p>
+                    <input type="checkbox" id="deportes" name="intereses" value="deportes">
+                    <label for="deportes">Deportes</label>
+
+                    <input type="checkbox" id="musica" name="intereses" value="musica">
+                    <label for="musica">Música</label>
+
+                    <input type="checkbox" id="tecnologia" name="intereses" value="tecnologia">
+                    <label for="tecnologia">Tecnología</label>
+                </div>
+
+                <div>
+                    <label for="pais">País:</label>
+                    <select id="pais" name="pais">
+                        <option value="">Selecciona un país</option>
+                        <option value="ar">Argentina</option>
+                        <option value="mx">México</option>
+                        <option value="es">España</option>
+                        <option value="co">Colombia</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <div>
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea>
+            </div>
+
+            <div>
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
+
+            <div>
+                <button type="submit">Registrarse</button>
+                <button type="reset">Limpiar formulario</button>
+            </div>
+        </form>
+    </section>
+
+</body>
+
+</html>

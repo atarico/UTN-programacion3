@@ -1,0 +1,69 @@
+<!-- Ejemplo 1: Estructura básica completa -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primera Página Web</title>
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenidos a mi sitio web</h1>
+        <nav>
+            <ul>
+                <li><a href="./pages/formularios.html">Formulario</a></li>
+                <li><a href="./pages/multimedia.html">Multimedia</a></li>
+                <li><a href="./pages/tablas.html">Tablas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Esta es la <strong>página principal</strong> de mi sitio web.</p>
+            <p>Aquí podrás encontrar <em>información interesante</em> sobre HTML.</p>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <article>
+                <h3>Mi historia</h3>
+                <p>Soy un estudiante de programación web.</p>
+                <p>Me gusta crear páginas web <mark>accesibles y bonitas</mark>.</p>
+            </article>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form action="/" method="post">
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h3>Datos interesantes</h3>
+        <p>HTML significa HyperText Markup Language.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2025 Mi Sitio Web</p>
+    </footer>
+</body>
+
+</html>

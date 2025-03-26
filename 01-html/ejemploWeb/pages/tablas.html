@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./formularios.html">Formulario</a></li>
+                <li><a href="./multimedia.html">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Ejemplo 4: Tablas -->
+    <section>
+        <h2>Horario de clases</h2>
+        <table border="1">
+            <caption>Horario semanal</caption>
+            <thead>
+                <tr>
+                    <th>Hora</th>
+                    <th>Lunes</th>
+                    <th>Martes</th>
+                    <th>Miércoles</th>
+                    <th>Jueves</th>
+                    <th>Viernes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 10:30</td>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                    <td>JavaScript</td>
+                    <td>HTML</td>
+                    <td>Proyecto</td>
+                </tr>
+                <tr>
+                    <td>10:45 - 12:15</td>
+                    <td>CSS</td>
+                    <td>JavaScript</td>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                    <td>Proyecto</td>
+                </tr>
+                <tr>
+                    <td>12:15 - 13:00</td>
+                    <td colspan="5">Almuerzo</td>
+                </tr>
+                <tr>
+                    <td>13:00 - 14:30</td>
+                    <td>JavaScript</td>
+                    <td>HTML</td>
+                    <td>CSS</td>
+                    <td>JavaScript</td>
+                    <td rowspan="2">Tutoría</td>
+                </tr>
+                <tr>
+                    <td>14:45 - 16:15</td>
+                    <td>Proyecto</td>
+                    <td>Proyecto</td>
+                    <td>Proyecto</td>
+                    <td>Proyecto</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">Total: 30 horas semanales</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</body>
+
+</html>
