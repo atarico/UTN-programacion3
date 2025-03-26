@@ -146,6 +146,7 @@ HTML5 introduce etiquetas semánticas para mejorar la estructura:
 
 - `<header>`: Encabezado de la página.
 - `<nav>`: Menú de navegación.
+- `<main>`: Contenido principal.
 - `<section>`: Secciones del contenido.
 - `<article>`: Contenido independiente.
 - `<aside>`: Contenido relacionado (barra lateral).
