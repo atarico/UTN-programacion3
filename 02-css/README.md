@@ -85,6 +85,19 @@ h1 {
 
 **El color final será rojo, ya que el selector de ID tiene mayor especificidad.**
 
+#### Selector universal `*`
+
+- selecciona todos los elementos de un documento HTML
+- su nivel de especificidad es el mas bajo de todos.
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+```
+
 #### 3.1 Selector de Etiqueta
 
 Selecciona todos los elementos que tegan la etiqueta `<h1>`
@@ -279,6 +292,21 @@ div {
 }
 ```
 
+#### 4.6 Sombras de caja
+
+```css
+div {
+  box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
+}
+```
+
+##### Los valores que toma son los siguientes:
+
+1. desplazamiento horizontal (x) de la sombra (con valores positivos se mueve a la derecha y con negativos a la izquierda)
+2. desplazamiento vertical (y) de la sombra (con valores positivos se mueve hacia abajo y con negativos hacia arriba)
+3. difuminado de la sombra (blur)
+4. color de la sombra
+
 #### 4.6 Ancho y Alto
 
 Las propiedades `width` y `height` permiten definir el tamaño de un elemento.
@@ -400,7 +428,7 @@ div {
 }
 ```
 
-### 7.2 Posicionamiento Relativo
+### 7.2 Posicionamiento Relative
 
 ```css
 div {
@@ -410,7 +438,7 @@ div {
 }
 ```
 
-### 7.3 Posicionamiento Absoluto
+### 7.3 Posicionamiento Absolute
 
 ```css
 div {
@@ -420,7 +448,7 @@ div {
 }
 ```
 
-### 7.4 Posicionamiento Fijo
+### 7.4 Posicionamiento Fixed
 
 ```css
 header {
@@ -430,7 +458,114 @@ header {
 }
 ```
 
-## 7. Flexbox en CSS
+### 7.5 Posicionamiento
+
+```css
+nav {
+  position: sticky;
+  top: 0;
+}
+```
+
+### 8 Pseudoclases y Pseudoelementos
+
+#### 8.1 Pseudoclases
+
+Las pseudoclases permiten aplicar estilos a un elemento en función de su estado o posición dentro del documento.
+
+**Ejemplos de pseudoclases comunes:**
+
+- `:hover` (cuando el mouse pasa sobre un elemento)
+- `:focus` (cuando un elemento está enfocado)
+- `:nth-child(n)` (selecciona elementos según su posición)
+
+**Ejemplo de uso:**
+
+```css
+/* Cambia el color del texto cuando el usuario pasa el mouse sobre el enlace */
+a:hover {
+  color: red;
+}
+
+/* Aplica un borde cuando un input está enfocado */
+input:focus {
+  border: 2px solid blue;
+}
+
+/* Selecciona el tercer elemento de una lista */
+li:nth-child(3) {
+  font-weight: bold;
+}
+```
+
+**Otras pseudoclases útiles:**
+
+```css
+/* Selecciona el primer elemento de su tipo dentro de un contenedor */
+p:first-of-type {
+  color: green;
+}
+
+/* Selecciona los elementos pares de una lista */
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+/* Selecciona el último hijo de un contenedor */
+div:last-child {
+  margin-bottom: 20px;
+}
+```
+
+---
+
+#### 8.2 Pseudoelementos
+
+Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento sin necesidad de modificar el HTML.
+
+**Ejemplos de pseudoelementos comunes:**
+
+- `::before` (inserta contenido antes del elemento)
+- `::after` (inserta contenido después del elemento)
+
+**Ejemplo de uso:**
+
+```css
+/* Inserta un texto antes de cada párrafo */
+p::before {
+  content: "Inicio: ";
+  font-weight: bold;
+}
+
+/* Inserta una flecha después de los enlaces */
+a::after {
+  content: " →";
+  color: gray;
+}
+```
+
+**Otros usos comunes:**
+
+```css
+/* Simula una lista numerada agregando números antes de cada elemento */
+li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+}
+
+/* Resalta la primera letra de un párrafo */
+p::first-letter {
+  font-size: 2em;
+  color: blue;
+}
+
+/* Aplica un estilo a la primera línea de un párrafo */
+p::first-line {
+  font-weight: bold;
+}
+```
+
+## 9 Flexbox en CSS
 
 Flexbox es un método de diseño **unidimensional** para organizar elementos en filas o columnas.
 
@@ -482,7 +617,7 @@ Flexbox es un método de diseño **unidimensional** para organizar elementos en 
 }
 ```
 
-## 8. Grid en CSS
+## 10 Grid en CSS
 
 CSS Grid es un sistema de diseño **bidimensional** que permite organizar elementos en filas y columnas.
 
@@ -539,7 +674,7 @@ CSS Grid es un sistema de diseño **bidimensional** que permite organizar elemen
 }
 ```
 
-### 9. Media Queries
+### 11. Media Queries
 
 Permiten hacer diseños responsivos.
 
@@ -551,107 +686,9 @@ Permiten hacer diseños responsivos.
 }
 ```
 
-### 10. Pseudoclases y Pseudoelementos
+### 12. Animaciones y Transiciones
 
-#### 10.1 Pseudoclases
-
-Las pseudoclases permiten aplicar estilos a un elemento en función de su estado o posición dentro del documento.
-
-**Ejemplos de pseudoclases comunes:**
-
-- `:hover` (cuando el mouse pasa sobre un elemento)
-- `:focus` (cuando un elemento está enfocado)
-- `:nth-child(n)` (selecciona elementos según su posición)
-
-**Ejemplo de uso:**
-
-```css
-/* Cambia el color del texto cuando el usuario pasa el mouse sobre el enlace */
-a:hover {
-  color: red;
-}
-
-/* Aplica un borde cuando un input está enfocado */
-input:focus {
-  border: 2px solid blue;
-}
-
-/* Selecciona el tercer elemento de una lista */
-li:nth-child(3) {
-  font-weight: bold;
-}
-```
-
-**Otras pseudoclases útiles:**
-
-```css
-/* Selecciona el primer elemento de su tipo dentro de un contenedor */
-p:first-of-type {
-  color: green;
-}
-
-/* Selecciona los elementos pares de una lista */
-tr:nth-child(even) {
-  background-color: lightgray;
-}
-
-/* Selecciona el último hijo de un contenedor */
-div:last-child {
-  margin-bottom: 20px;
-}
-```
-
----
-
-#### 10.2 Pseudoelementos
-
-Los pseudoelementos permiten aplicar estilos a partes específicas de un elemento sin necesidad de modificar el HTML.
-
-**Ejemplos de pseudoelementos comunes:**
-
-- `::before` (inserta contenido antes del elemento)
-- `::after` (inserta contenido después del elemento)
-
-**Ejemplo de uso:**
-
-```css
-/* Inserta un texto antes de cada párrafo */
-p::before {
-  content: "Inicio: ";
-  font-weight: bold;
-}
-
-/* Inserta una flecha después de los enlaces */
-a::after {
-  content: " →";
-  color: gray;
-}
-```
-
-**Otros usos comunes:**
-
-```css
-/* Simula una lista numerada agregando números antes de cada elemento */
-li::before {
-  content: counter(item) ". ";
-  counter-increment: item;
-}
-
-/* Resalta la primera letra de un párrafo */
-p::first-letter {
-  font-size: 2em;
-  color: blue;
-}
-
-/* Aplica un estilo a la primera línea de un párrafo */
-p::first-line {
-  font-weight: bold;
-}
-```
-
-### 11. Animaciones y Transiciones
-
-#### 11.1 Transiciones
+#### 12.1 Transiciones
 
 ```css
 div {
@@ -659,7 +696,7 @@ div {
 }
 ```
 
-#### 11.2 Animaciones
+#### 12.2 Animaciones
 
 ```css
 @keyframes mover {
