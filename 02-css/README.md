@@ -296,8 +296,8 @@ div {
 
 - `px` (píxeles)
 - `%` (porcentaje respecto al elemento contenedor)
-- `em` (relativo al tamaño de fuente del elemento)
-- `rem` (relativo al tamaño de fuente del `html`)
+- `em` (relativo al tamaño de fuente del elemento padre)
+- `rem` (equivale al tamaño de fuente del elemento raíz (html)).
 - `vw` (porcentaje del ancho de la ventana del navegador)
 - `vh` (porcentaje del alto de la ventana del navegador)
 - `auto` (ajusta automáticamente el tamaño según el contenido)
