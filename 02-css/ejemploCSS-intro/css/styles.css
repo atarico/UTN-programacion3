@@ -10,17 +10,7 @@ section {
     border: 2px solid #f00;
     padding: 20px;
     background-color: #0e0e0e;
-
     border-radius: 50px;
-
-    /* 
-    box-shadow agrega sombras a una caja
-    los valores que toma son los siguientes:
-    1. desplazamiento horizontal (x) de la sombra (con valores positivos se mueve a la derecha y con negativos a la izquierda)
-    2. desplazamiento vertical (y) de la sombra (con valores positivos se mueve hacia abajo y con negativos hacia arriba)
-    3. difuminado de la sombra (blur)
-    4. color de la sombra
-    */
     box-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5);
 }
 
