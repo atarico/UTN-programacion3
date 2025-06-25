@@ -253,3 +253,11 @@ function OtroHijo({ valor }) {
 ```
 
 De esta forma, el componente padre mantiene el control sobre cómo se actualiza el estado y los hijos solo notifican los cambios a través de funciones específicas.
+
+## Recursos recomendados
+
+- [Documentación oficial de React (en español)](https://es.react.dev/)
+- [Tutorial interactivo de React](https://es.react.dev/learn/tutorial-tic-tac-toe)
+- [React: Guía completa en MDN](https://developer.mozilla.org/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+- [usehooks.com (ejemplos de hooks personalizados)](https://usehooks.com/)
+- [React en YouTube: Midudev](https://www.youtube.com/playlist?list=PLUofhDIg_38q4D1pyaXsu2Ic1Q0Q8kB1l)
