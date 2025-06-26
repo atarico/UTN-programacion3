@@ -589,7 +589,7 @@ Antes de comenzar a aprender React, es fundamental tener una base sólida en los
 - Manipulación de arrays y objetos (métodos como `map`, `filter`, `reduce`)
 - Destructuring (objetos y arrays)
 - Spread y rest operator (`...`)
-- Estructuras de control (if, for, while, ternario)
+- Estructuras de control (if, for, while) y ternario
 - Manejo de eventos en el DOM
 - Promesas, async/await y asincronismo
 - Uso de `fetch` para peticiones HTTP

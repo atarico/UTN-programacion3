@@ -11,8 +11,6 @@ Este repo va a estar dividido en carpetas, cada una correspondiente a un tema es
 - **`css/`** - Estilos, diseño y responsive CSS.
 - **`javascript/`** - Programación con JavaScript, incluyendo ES6+, JS sincrónico y asincrónico, concepto de web component.
 - **`git/`** - Uso de Git y GitHub.
-- **`api/`** - Qué es, creación y consumo de APIs.
-- **`asp.net/`** - Desarrollo backend con ASP.NET.
 - **`intro-react/`** - Introducción a React.
 
 ## 📌 Objetivo
@@ -38,8 +36,6 @@ Se recomienda tener las siguientes herramientas en su PCs. Ya que son las herram
 - **Node.js y npm** para usar JS en el backend y manejar los paquetes necesarios.
 - **Git** para trabajar con el control de versiones.
 - **Visual Studio Code** como editor de código.
-- **Visual Studio** como IDE para armar el backend en C# armando las APIs.
-- **ASP.NET SDK** para trabajar con .NET.
 - **React.js** para el desarrollo de interfaces interactivas.
 
 <span id="documentacion"></span>
@@ -49,6 +45,6 @@ Se recomienda tener las siguientes herramientas en su PCs. Ya que son las herram
 #### Documentación oficial
 
 - [MDN Web Docs](https://developer.mozilla.org/) (Para http, html, css y JS)
+- [W3School](https://www.w3schools.com/) (Para todas las tecnologías web que aplicaremos)
 - [GitHub Docs](https://docs.github.com/)
-- [ASP.NET Documentation](https://learn.microsoft.com/en-us/aspnet/core/)
 - [React.js Docs](https://react.dev/)
