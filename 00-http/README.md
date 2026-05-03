@@ -108,21 +108,43 @@ Administran cómo se almacenan en caché los recursos.
 - **CSRF (Cross-Site Request Forgery)**: Ataque en el que se engaña a un usuario autenticado para que realice acciones no deseadas; se mitiga con tokens de autenticación.
 - **XSS (Cross-Site Scripting)**: Ataque en el que se inyecta código malicioso en una página web; se previene con encabezados como `Content-Security-Policy`.
 
-## 8. HTTP vs. WebSockets
+## 8. Estructura de una URL
+
+Una URL (Uniform Resource Locator) es la dirección específica que se utiliza para acceder a un recurso en la web. Está compuesta por varias partes que le indican al navegador exactamente qué buscar y dónde.
+
+Veamos la anatomía de una URL completa usando este ejemplo:
+`https://www.ejemplo.com:443/tienda/productos?categoria=zapatos&color=rojo#detalles`
+
+1. **Esquema (Protocolo)**: `https://`
+   - Indica el protocolo que el navegador debe usar para acceder al recurso. Los más comunes son `http` y `https`.
+2. **Subdominio**: `www.`
+   - Una subdivisión lógica del dominio principal. `www` es el más común, pero puede ser algo como `blog.ejemplo.com` o `api.ejemplo.com`.
+3. **Dominio**: `ejemplo.com`
+   - El nombre principal del sitio web. Está compuesto por el nombre (`ejemplo`) y el Dominio de Nivel Superior o TLD (`.com`, `.org`, `.com.ar`).
+4. **Puerto**: `:443`
+   - Indica el "canal" técnico específico en el servidor. Generalmente se omite porque los navegadores usan los puertos por defecto (80 para HTTP, 443 para HTTPS).
+5. **Ruta (Path)**: `/tienda/productos`
+   - Es la ruta exacta al recurso específico dentro del servidor, similar a la estructura de carpetas en tu computadora.
+6. **Parámetros de consulta (Query string)**: `?categoria=zapatos&color=rojo`
+   - Son datos adicionales enviados al servidor. Comienzan con un signo de interrogación `?`, se componen de pares `clave=valor`, y se separan entre sí con un ampersand `&`.
+7. **Fragmento (Ancla)**: `#detalles`
+   - Apunta a una sección específica dentro de la página (por ejemplo, un `id` en HTML). El navegador desplaza la vista hacia esa sección. Esta parte nunca se envía al servidor.
+
+## 9. HTTP vs. WebSockets
 
 - **HTTP**: Basado en un modelo de solicitud-respuesta donde cada petición es independiente.
 - **WebSockets**: Permite una comunicación bidireccional y persistente entre cliente y servidor, ideal para aplicaciones en tiempo real como chats o juegos online.
 
-## 9. Herramientas para Analizar HTTP
+## 10. Herramientas para Analizar HTTP
 
 - **Postman**: Permite realizar pruebas de API con solicitudes HTTP personalizadas.
 - **cURL**: Herramienta de línea de comandos para hacer solicitudes HTTP.
 - **DevTools de los Navegadores**: Ofrecen herramientas para inspeccionar y analizar solicitudes y respuestas HTTP en tiempo real.
 
-## 10. Conclusión
+## 11. Conclusión
 
 HTTP es el pilar de la web moderna. Comprender cómo funciona, sus métodos, códigos de estado y medidas de seguridad es fundamental para desarrollar aplicaciones eficientes y seguras. Con cada nueva versión del protocolo, se mejora la velocidad, seguridad y eficiencia de la comunicación en la web.
 
-## 📚 11. Documentación oficial
+## 📚 12. Documentación oficial
 
 - [MDN Web Docs](https://developer.mozilla.org/es/docs/Web/HTTP)
