@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Florería de Flor — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 1</span>
+      <h1>🌸 La Florería de Flor</h1>
+      <p class="subtitulo">Ayudá a Florencia a arreglar el sistema de precios</p>
+    </div>
+    <div class="bug-alerta">
+      🐛 Este sistema tiene <strong>3 bugs</strong> que debés encontrar y corregir
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="pedido-form">
+      <h2>Armar un ramo</h2>
+      <div class="flores-grid">
+
+        <div class="flor-item">
+          <span class="flor-emoji">🌹</span>
+          <div class="flor-info">
+            <label for="cantidad-rosas">Rosas</label>
+            <span class="precio-unitario">$250 c/u</span>
+          </div>
+          <input type="number" id="cantidad-rosas" min="0" value="0" />
+        </div>
+
+        <div class="flor-item">
+          <span class="flor-emoji">🌷</span>
+          <div class="flor-info">
+            <label for="cantidad-tulipanes">Tulipanes</label>
+            <span class="precio-unitario">$180 c/u</span>
+          </div>
+          <input type="number" id="cantidad-tulipanes" min="0" value="0" />
+        </div>
+
+        <div class="flor-item">
+          <span class="flor-emoji">🌻</span>
+          <div class="flor-info">
+            <label for="cantidad-girasoles">Girasoles</label>
+            <span class="precio-unitario">$120 c/u</span>
+          </div>
+          <input type="number" id="cantidad-girasoles" min="0" value="0" />
+        </div>
+
+      </div>
+      <button class="btn-calcular" id="btn-calcular">Calcular pedido</button>
+    </section>
+
+    <section class="resultado-panel">
+      <h2>Resumen del pedido</h2>
+      <div id="resultado-contenido" class="resultado-contenido">
+        <p class="placeholder-texto">Completá el pedido y hacé clic en "Calcular pedido"</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: Funciones con return, parámetros, operador ternario → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

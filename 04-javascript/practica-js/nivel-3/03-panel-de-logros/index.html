@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de Logros — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 3</span>
+      <h1>🏆 Panel de Logros</h1>
+      <p class="subtitulo">Sistema de logros de Sofía — clases y closures</p>
+    </div>
+    <div class="progreso-header">
+      <div class="barra-fondo">
+        <div id="barra-progreso" class="barra-relleno"></div>
+      </div>
+      <span id="texto-progreso" class="texto-progreso">0 / 8 logros</span>
+    </div>
+  </header>
+
+  <main class="app-main">
+
+    <div class="columna-logros">
+      <h2>Logros disponibles</h2>
+      <div id="logros-grid" class="logros-grid">
+        <!-- Generado por JS -->
+      </div>
+    </div>
+
+    <aside class="columna-lateral">
+
+      <section class="acciones-panel">
+        <h2>🎮 Simular acciones</h2>
+        <p class="acciones-desc">
+          Hacé clic para simular acciones del juego y ver cómo se desbloquean logros.
+        </p>
+        <div class="botones-acciones">
+          <button class="btn-accion" data-accion="primera-victoria">⚔️ Ganar partida</button>
+          <button class="btn-accion" data-accion="victoria-seguida">🔥 Ganar 3 seguidas</button>
+          <button class="btn-accion" data-accion="coleccionar">🌟 Coleccionar item</button>
+          <button class="btn-accion" data-accion="explorar">🗺️ Explorar zona</button>
+          <button class="btn-accion" data-accion="ayudar-aliado">🤝 Ayudar aliado</button>
+        </div>
+      </section>
+
+      <section class="historial-panel">
+        <h2>📋 Historial</h2>
+        <ul id="historial-lista" class="historial-lista">
+          <li class="historial-vacio">Sin actividad registrada</li>
+        </ul>
+        <button id="btn-resetear" class="btn-resetear">Resetear todo</button>
+      </section>
+
+    </aside>
+
+  </main>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: Clases ES6, closures, localStorage → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

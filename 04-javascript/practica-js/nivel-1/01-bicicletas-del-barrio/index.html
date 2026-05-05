@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bicicletas del Barrio — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 1</span>
+      <h1>🚲 Bicicletas del Barrio</h1>
+      <p class="subtitulo">Sistema de stock para Juan</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="stock-grid">
+
+      <div class="producto-card">
+        <div class="producto-emoji">🚵</div>
+        <h2>Mountain Bike</h2>
+        <div class="stock-display">
+          <span class="stock-label">Stock:</span>
+          <span class="stock-numero" id="stock-mountain">-</span>
+        </div>
+        <div class="producto-botones">
+          <button class="btn-stock btn-restar" id="btn-restar-mountain">−</button>
+          <button class="btn-stock btn-sumar" id="btn-sumar-mountain">+</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="producto-emoji">🚴</div>
+        <h2>BMX</h2>
+        <div class="stock-display">
+          <span class="stock-label">Stock:</span>
+          <span class="stock-numero" id="stock-bmx">-</span>
+        </div>
+        <div class="producto-botones">
+          <button class="btn-stock btn-restar" id="btn-restar-bmx">−</button>
+          <button class="btn-stock btn-sumar" id="btn-sumar-bmx">+</button>
+        </div>
+      </div>
+
+      <div class="producto-card">
+        <div class="producto-emoji">🏎️</div>
+        <h2>Ruta</h2>
+        <div class="stock-display">
+          <span class="stock-label">Stock:</span>
+          <span class="stock-numero" id="stock-ruta">-</span>
+        </div>
+        <div class="producto-botones">
+          <button class="btn-stock btn-restar" id="btn-restar-ruta">−</button>
+          <button class="btn-stock btn-sumar" id="btn-sumar-ruta">+</button>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="panel-alertas">
+      <h3>⚠️ Alertas de stock</h3>
+      <p id="alertas" class="alertas-texto">Calculando...</p>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: Variables, Funciones, DOM, Eventos → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

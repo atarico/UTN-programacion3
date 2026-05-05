@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokéBúsqueda — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 3</span>
+      <h1>⚡ PokéBúsqueda</h1>
+      <p class="subtitulo">Buscador con PokeAPI — Tomás necesita tu ayuda</p>
+    </div>
+  </header>
+
+  <div class="app-layout">
+
+    <div class="columna-busqueda">
+
+      <div class="buscador">
+        <input
+          type="text"
+          id="input-busqueda"
+          class="input-poke"
+          placeholder="Nombre o número (ej: pikachu, 25)"
+        />
+        <button id="btn-buscar" class="btn-buscar">Buscar</button>
+      </div>
+
+      <div id="estado-carga" class="estado-oculto">
+        <div class="spinner"></div>
+        <span>Buscando...</span>
+      </div>
+
+      <div id="mensaje-error" class="mensaje-error estado-oculto">
+        <!-- Mensaje de error -->
+      </div>
+
+      <div id="pokemon-card" class="pokemon-card estado-oculto">
+        <div class="poke-header">
+          <img id="poke-sprite" class="poke-sprite" src="" alt="" />
+          <div class="poke-info">
+            <div class="poke-numero" id="poke-numero">#001</div>
+            <div class="poke-nombre" id="poke-nombre">Bulbasaur</div>
+            <div id="poke-tipos" class="poke-tipos"></div>
+            <div class="poke-medidas">
+              <span id="poke-altura">Altura: —</span>
+              <span id="poke-peso">Peso: —</span>
+            </div>
+          </div>
+        </div>
+        <div class="poke-stats">
+          <h3>Base Stats</h3>
+          <div id="poke-stats-lista" class="stats-lista"></div>
+        </div>
+        <button id="btn-favorito" class="btn-favorito">⭐ Agregar a favoritos</button>
+      </div>
+
+    </div>
+
+    <aside class="columna-favoritos">
+      <h2>⭐ Favoritos de Tomás</h2>
+      <p class="favoritos-info">Hacé clic en un favorito para buscarlo de nuevo</p>
+      <ul id="lista-favoritos" class="lista-favoritos">
+        <li class="favoritos-vacio">Sin favoritos guardados</li>
+      </ul>
+      <button id="btn-limpiar-favoritos" class="btn-limpiar-fav">Borrar favoritos</button>
+    </aside>
+
+  </div>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: fetch, async/await, try/catch, localStorage → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+:root {
+  --bg: #1e1e2e;
+  --surface: #2a2a3e;
+  --border: #3d3d5c;
+  --accent: #ffb86c;
+  --success: #50fa7b;
+  --danger: #ff5555;
+  --text: #f0f0f0;
+  --text-muted: #888aaa;
+  --radius: 12px;
+}
+
+.ejercicio-bruno {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ejercicio-header {
+  margin-bottom: 2rem;
+}
+
+.nivel-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #1a1a2e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ejercicio-header h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem; }
+.ejercicio-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* ── Stats ── */
+.tareas-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.82rem;
+  flex: 1;
+  text-align: center;
+}
+
+.stat-item strong { color: var(--accent); font-size: 1.1rem; display: block; }
+.stat-item span { color: var(--text-muted); font-size: 0.75rem; }
+
+/* ── Formulario ── */
+.form-nueva-tarea {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-tarea {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: system-ui;
+}
+
+.input-tarea:focus { outline: none; border-color: var(--accent); }
+
+.btn-agregar {
+  padding: 0.7rem 1.25rem;
+  background: var(--accent);
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+}
+
+.btn-agregar:hover { opacity: 0.85; }
+
+/* ── Filtros ── */
+.filtros {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.btn-filtro {
+  padding: 0.4rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: system-ui;
+  transition: all 0.15s;
+}
+
+.btn-filtro.activo {
+  background: var(--accent);
+  color: #1a1a2e;
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+.btn-filtro:hover:not(.activo) {
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* ── Lista de tareas ── */
+.lista-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.tarea-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  transition: border-color 0.15s;
+}
+
+.tarea-item.completada {
+  opacity: 0.6;
+}
+
+.tarea-item.completada .tarea-texto {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.btn-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+
+.btn-check.checked {
+  background: var(--success);
+  border-color: var(--success);
+  color: #1a1a2e;
+}
+
+.btn-check:hover:not(.checked) {
+  border-color: var(--success);
+}
+
+.tarea-texto {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.btn-eliminar {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  transition: color 0.15s;
+}
+
+.btn-eliminar:hover { color: var(--danger); }
+
+.lista-vacia {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.ejercicio-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.ejercicio-footer code { color: var(--accent); }

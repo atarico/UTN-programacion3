@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Kiosco de Don Raúl — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 1</span>
+      <h1>🏪 El Kiosco de Don Raúl</h1>
+      <p class="subtitulo">Calculadora de vuelto y registro de ventas</p>
+    </div>
+    <div class="contador-header">
+      <div class="stat">
+        <span class="stat-numero" id="total-ventas">0</span>
+        <span class="stat-label">ventas hoy</span>
+      </div>
+      <div class="stat">
+        <span class="stat-numero" id="total-recaudado">$0</span>
+        <span class="stat-label">recaudado</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="cobro-form">
+      <h2>Nueva venta</h2>
+
+      <div class="form-grupo">
+        <label for="precio-producto">Precio del producto</label>
+        <div class="input-con-simbolo">
+          <span class="simbolo">$</span>
+          <input type="number" id="precio-producto" min="0" step="0.01" placeholder="0.00" />
+        </div>
+      </div>
+
+      <div class="form-grupo">
+        <label for="monto-pago">El cliente paga con</label>
+        <div class="input-con-simbolo">
+          <span class="simbolo">$</span>
+          <input type="number" id="monto-pago" min="0" step="0.01" placeholder="0.00" />
+        </div>
+      </div>
+
+      <button class="btn-cobrar" id="btn-cobrar">Cobrar</button>
+    </section>
+
+    <section class="resultado-panel">
+      <h2>Resultado</h2>
+      <div id="resultado" class="resultado-vacio">
+        <p>Ingresá el precio y el monto de pago</p>
+      </div>
+    </section>
+
+    <section class="historial-panel">
+      <h2>Últimas ventas</h2>
+      <ul id="historial-ventas" class="historial-lista">
+        <li class="historial-vacio">Sin ventas registradas</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: Variables de estado, parseFloat, condicionales → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

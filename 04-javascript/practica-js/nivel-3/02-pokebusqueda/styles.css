@@ -1,0 +1,352 @@
+:root {
+  --bg: #1e1e2e;
+  --surface: #2a2a3e;
+  --border: #3d3d5c;
+  --accent: #ff5555;
+  --accent-yellow: #f1fa8c;
+  --success: #50fa7b;
+  --warning: #ffb86c;
+  --danger: #ff5555;
+  --text: #f0f0f0;
+  --text-muted: #888aaa;
+  --font: system-ui, -apple-system, sans-serif;
+  --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+}
+
+.nivel-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #f0f0f0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.app-header h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.2rem; }
+.subtitulo { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Layout */
+.app-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .app-layout { grid-template-columns: 1fr; }
+}
+
+/* Buscador */
+.buscador {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.input-poke {
+  flex: 1;
+  padding: 0.7rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
+.input-poke:focus { outline: none; border-color: var(--accent); }
+
+.btn-buscar {
+  padding: 0.7rem 1.25rem;
+  background: var(--accent);
+  color: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-buscar:hover { opacity: 0.85; }
+
+/* Estado carga / error */
+.estado-oculto { display: none; }
+
+.estado-carga {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  padding: 1rem 0;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.mensaje-error {
+  background: #3a2020;
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: #ffa0a0;
+  font-size: 0.9rem;
+}
+
+/* Card del Pokémon */
+.pokemon-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.poke-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.poke-sprite {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.poke-numero { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.2rem; }
+.poke-nombre {
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.poke-tipos {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.tipo-badge {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #1a1a2e;
+}
+
+/* Colores por tipo */
+.tipo-fire     { background: #ff9340; }
+.tipo-water    { background: #6be5ff; }
+.tipo-grass    { background: #50fa7b; }
+.tipo-electric { background: #f1fa8c; }
+.tipo-normal   { background: #cccccc; }
+.tipo-poison   { background: #bd93f9; }
+.tipo-psychic  { background: #ff79c6; }
+.tipo-fighting { background: #ffb86c; }
+.tipo-rock     { background: #aaaaaa; }
+.tipo-ground   { background: #c8a870; }
+.tipo-ice      { background: #8be9fd; }
+.tipo-bug      { background: #a0d060; }
+.tipo-ghost    { background: #6272a4; }
+.tipo-dragon   { background: #7b68ee; }
+.tipo-dark     { background: #555577; color: #f0f0f0; }
+.tipo-steel    { background: #aabbc8; }
+.tipo-fairy    { background: #ffb8d8; }
+.tipo-flying   { background: #aaccff; }
+
+.poke-medidas {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Stats */
+.poke-stats h3 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.stats-lista { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.stat-fila {
+  display: grid;
+  grid-template-columns: 90px 2.5rem 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.stat-nombre {
+  color: var(--text-muted);
+  text-transform: capitalize;
+  font-size: 0.78rem;
+}
+
+.stat-valor { font-weight: 700; text-align: right; }
+
+.stat-barra-fondo {
+  background: var(--bg);
+  border-radius: 999px;
+  height: 6px;
+  overflow: hidden;
+}
+
+.stat-barra-relleno {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.btn-favorito {
+  width: 100%;
+  padding: 0.65rem;
+  background: transparent;
+  border: 1px solid var(--accent-yellow);
+  color: var(--accent-yellow);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  transition: background 0.15s;
+}
+
+.btn-favorito:hover { background: rgba(241,250,140,0.1); }
+
+/* Favoritos */
+.columna-favoritos {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.columna-favoritos h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--accent-yellow);
+}
+
+.favoritos-info {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.lista-favoritos {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-height: 60px;
+  margin-bottom: 1rem;
+}
+
+.favoritos-vacio {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.favorito-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.favorito-item:hover {
+  border-color: var(--accent-yellow);
+  color: var(--accent-yellow);
+}
+
+.btn-limpiar-fav {
+  width: 100%;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-limpiar-fav:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* Footer */
+.app-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.app-footer code { color: var(--accent); font-size: 0.8rem; }

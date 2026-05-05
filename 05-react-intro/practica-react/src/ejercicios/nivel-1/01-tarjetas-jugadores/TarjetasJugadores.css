@@ -1,0 +1,159 @@
+:root {
+  --bg: #1e1e2e;
+  --surface: #2a2a3e;
+  --border: #3d3d5c;
+  --accent: #50fa7b;
+  --danger: #ff5555;
+  --text: #f0f0f0;
+  --text-muted: #888aaa;
+  --radius: 12px;
+}
+
+.ejercicio-tarjetas {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ── Header del ejercicio ── */
+.ejercicio-header {
+  margin-bottom: 2rem;
+}
+
+.nivel-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #1a1a2e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ejercicio-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.ejercicio-header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ── Estadísticas del equipo ── */
+.equipo-stats {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.stat-chip {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1.1rem;
+  font-size: 0.85rem;
+}
+
+.stat-chip strong {
+  color: var(--accent);
+}
+
+/* ── Grid de tarjetas ── */
+.jugadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+/* ── Tarjeta individual ── */
+.tarjeta-jugador {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.tarjeta-jugador:hover {
+  border-color: var(--accent);
+}
+
+.numero-camiseta {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.tarjeta-jugador h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.posicion {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  background: #1e1e2e;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.badge-activo {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(80,250,123,0.15);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.badge-lesionado {
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(255,85,85,0.15);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.goles-info {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* ── Placeholder cuando la tarjeta está vacía ── */
+.tarjeta-placeholder {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* ── Footer ── */
+.ejercicio-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.ejercicio-footer code {
+  color: var(--accent);
+}
