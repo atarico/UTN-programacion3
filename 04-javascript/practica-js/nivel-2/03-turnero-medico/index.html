@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Consultorio Dra. Valeria — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 2</span>
+      <h1>🏥 Consultorio Dra. Valeria</h1>
+      <p class="subtitulo">Sistema de gestión de turnos</p>
+    </div>
+    <div class="header-stats">
+      <div class="stat-chip">
+        <span class="chip-numero" id="stat-espera">0</span>
+        <span class="chip-label">en espera</span>
+      </div>
+      <div class="stat-chip stat-chip-ok">
+        <span class="chip-numero" id="stat-atendidos">0</span>
+        <span class="chip-label">atendidos</span>
+      </div>
+      <div class="stat-chip stat-chip-turno">
+        <span class="chip-numero" id="turno-actual">—</span>
+        <span class="chip-label">turno actual</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-layout">
+
+    <section class="form-registro">
+      <h2>Registrar paciente</h2>
+      <div class="form-grupo">
+        <label for="input-nombre">Nombre completo</label>
+        <input type="text" id="input-nombre" placeholder="Ej: Ana García" />
+      </div>
+      <div class="form-grupo">
+        <label for="input-tipo">Tipo de consulta</label>
+        <select id="input-tipo">
+          <option value="General">Consulta general</option>
+          <option value="Control">Control de rutina</option>
+          <option value="Urgencia">Urgencia</option>
+          <option value="Seguimiento">Seguimiento</option>
+        </select>
+      </div>
+      <button class="btn-registrar" id="btn-registrar">Registrar turno</button>
+    </section>
+
+    <section class="columna-espera">
+      <h2>⏳ En espera</h2>
+      <ul id="lista-espera" class="lista-turnos">
+        <li class="turno-vacio">Sin pacientes en espera</li>
+      </ul>
+    </section>
+
+    <section class="columna-atendidos">
+      <h2>✅ Atendidos</h2>
+      <ul id="lista-atendidos" class="lista-turnos">
+        <li class="turno-vacio">Sin pacientes atendidos</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: Arrays de objetos, filter, Date → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

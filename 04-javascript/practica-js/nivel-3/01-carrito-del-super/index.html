@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MercaditoApp — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 3</span>
+      <h1>🛒 MercaditoApp</h1>
+      <p class="subtitulo">Carrito persistente de Marta (con localStorage)</p>
+    </div>
+    <div class="carrito-badge">
+      <span id="badge-cantidad">0</span> items en el carrito
+    </div>
+  </header>
+
+  <div class="app-layout">
+
+    <section class="catalogo">
+      <h2>Productos disponibles</h2>
+      <div class="productos-grid" id="productos-grid">
+        <!-- Generado por JS -->
+      </div>
+    </section>
+
+    <aside class="carrito-panel">
+      <h2>🧺 Carrito de Marta</h2>
+      <ul id="carrito-lista" class="carrito-lista">
+        <li class="carrito-vacio">El carrito está vacío</li>
+      </ul>
+      <div class="carrito-footer">
+        <div class="carrito-total-row">
+          <span>Total</span>
+          <span id="carrito-total" class="total-valor">$0</span>
+        </div>
+        <button class="btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+      </div>
+      <p class="persistencia-info">💾 El carrito se guarda automáticamente</p>
+    </aside>
+
+  </div>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: localStorage, closures → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

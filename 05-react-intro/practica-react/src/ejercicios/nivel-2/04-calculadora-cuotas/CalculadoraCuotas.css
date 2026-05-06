@@ -1,0 +1,179 @@
+:root {
+  --bg: #1e1e2e;
+  --surface: #2a2a3e;
+  --border: #3d3d5c;
+  --accent: #8be9fd;
+  --success: #50fa7b;
+  --danger: #ff5555;
+  --warning: #ffb86c;
+  --text: #f0f0f0;
+  --text-muted: #888aaa;
+  --radius: 12px;
+}
+
+.ejercicio-cuotas {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ejercicio-header {
+  margin-bottom: 2rem;
+}
+
+.nivel-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #1a1a2e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ejercicio-header h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 0.25rem; }
+.ejercicio-header p { color: var(--text-muted); font-size: 0.9rem; }
+
+/* Layout de dos columnas */
+.cuotas-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 560px) {
+  .cuotas-layout { grid-template-columns: 1fr; }
+}
+
+/* ── Formulario ── */
+.form-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.form-panel h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+
+.form-grupo label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.form-grupo input,
+.form-grupo select {
+  padding: 0.65rem 0.85rem;
+  background: #1e1e2e;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-family: system-ui;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.btn-calcular {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--accent);
+  color: #1a1a2e;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: opacity 0.15s;
+}
+
+.btn-calcular:hover { opacity: 0.85; }
+
+/* ── Panel de resultado ── */
+.resultado-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.resultado-panel h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.resultado-vacio {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-style: italic;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+.resultado-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.resultado-fila:last-child { border-bottom: none; }
+.resultado-fila .label { color: var(--text-muted); }
+.resultado-fila .valor { font-weight: 700; }
+
+.cuota-monto {
+  font-size: 2rem !important;
+  color: var(--accent) !important;
+  font-weight: 900 !important;
+}
+
+.total-final .valor {
+  color: var(--warning);
+}
+
+.alerta-interes {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.85rem;
+  background: rgba(255,85,85,0.1);
+  border: 1px solid var(--danger);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  color: #ffa0a0;
+}
+
+.ejercicio-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.ejercicio-footer code { color: var(--accent); }

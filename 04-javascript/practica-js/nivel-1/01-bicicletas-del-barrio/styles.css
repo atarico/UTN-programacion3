@@ -1,0 +1,208 @@
+:root {
+  --bg: #1e1e2e;
+  --surface: #2a2a3e;
+  --border: #3d3d5c;
+  --accent: #50fa7b;
+  --success: #50fa7b;
+  --warning: #ffb86c;
+  --danger: #ff5555;
+  --text: #f0f0f0;
+  --text-muted: #888aaa;
+  --font: system-ui, -apple-system, sans-serif;
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.app-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 2rem;
+}
+
+.nivel-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #1a1a2e;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.app-header h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.subtitulo {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ── Main ── */
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 820px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Cards de producto ── */
+.stock-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.producto-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: border-color 0.2s;
+}
+
+.producto-card:hover {
+  border-color: var(--accent);
+}
+
+.producto-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.producto-card h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.stock-display {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.stock-label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.stock-numero {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent);
+  min-width: 2.5rem;
+  text-align: center;
+  transition: color 0.2s;
+}
+
+.producto-botones {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.btn-stock {
+  flex: 1;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.btn-stock:hover {
+  opacity: 0.85;
+}
+
+.btn-stock:active {
+  transform: scale(0.95);
+}
+
+.btn-sumar {
+  background: var(--accent);
+  color: #1a1a2e;
+}
+
+.btn-restar {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+/* ── Panel de alertas ── */
+.panel-alertas {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+}
+
+.panel-alertas h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--warning);
+}
+
+.alertas-texto {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.alerta-ok {
+  color: var(--success) !important;
+  font-weight: 600;
+}
+
+.alerta-warning {
+  color: var(--warning) !important;
+  font-weight: 600;
+}
+
+/* ── Footer ── */
+.app-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.app-footer code {
+  color: var(--accent);
+  font-size: 0.8rem;
+}

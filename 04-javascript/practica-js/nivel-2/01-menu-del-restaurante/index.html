@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Bistró de Ramón — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 2</span>
+      <h1>🍽️ El Bistró de Ramón</h1>
+      <p class="subtitulo">Menú digital con filtros y carrito de pedido</p>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <div class="columna-menu">
+      <div class="controles">
+        <input
+          type="text"
+          id="buscador"
+          class="input-buscar"
+          placeholder="🔍 Buscar plato..."
+        />
+        <select id="filtro-categoria" class="select-categoria">
+          <option value="todos">Todas las categorías</option>
+          <option value="entrada">Entradas</option>
+          <option value="principal">Principales</option>
+          <option value="postre">Postres</option>
+          <option value="bebida">Bebidas</option>
+        </select>
+      </div>
+
+      <div id="contador-resultados" class="contador-resultados">
+        Cargando menú...
+      </div>
+
+      <div id="menu-grid" class="menu-grid">
+        <!-- Las tarjetas se generan con JavaScript -->
+      </div>
+    </div>
+
+    <aside class="columna-pedido">
+      <div class="pedido-panel">
+        <h2>🧾 Mi pedido</h2>
+        <ul id="lista-pedido" class="lista-pedido">
+          <li class="pedido-vacio">Tu pedido está vacío</li>
+        </ul>
+        <div class="pedido-total">
+          <span>Total</span>
+          <span id="total-pedido" class="total-valor">$0</span>
+        </div>
+        <button class="btn-limpiar" id="btn-limpiar-pedido">Limpiar pedido</button>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: Arrays, filter, map, reduce, innerHTML → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

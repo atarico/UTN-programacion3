@@ -1,0 +1,157 @@
+.app-menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header del menú ── */
+.menu-header {
+  background: #2a2a3e;
+  border-bottom: 1px solid #3d3d5c;
+  padding: 2rem;
+  text-align: center;
+}
+
+.menu-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.menu-header p {
+  color: #888aaa;
+  font-size: 0.95rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.menu-nota {
+  display: inline-block;
+  margin-top: 1rem;
+  background: rgba(139,233,253,0.1);
+  border: 1px solid #8be9fd;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: #8be9fd;
+}
+
+/* ── Grid de ejercicios ── */
+.menu-grid {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.nivel-seccion {
+  margin-bottom: 2.5rem;
+}
+
+.nivel-titulo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888aaa;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #3d3d5c;
+}
+
+.ejercicios-fila {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.ejercicio-card {
+  background: #2a2a3e;
+  border: 1px solid #3d3d5c;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, transform 0.15s;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ejercicio-card:hover {
+  border-color: #bd93f9;
+  transform: translateY(-2px);
+}
+
+.ejercicio-numero {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #888aaa;
+}
+
+.ejercicio-nombre {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.ejercicio-temas {
+  font-size: 0.78rem;
+  color: #888aaa;
+  line-height: 1.4;
+}
+
+/* ── Vista de ejercicio activo ── */
+.ejercicio-activo {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.ejercicio-barra {
+  background: #2a2a3e;
+  border-bottom: 1px solid #3d3d5c;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-volver {
+  background: none;
+  border: 1px solid #3d3d5c;
+  border-radius: 7px;
+  color: #888aaa;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: var(--font);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-volver:hover {
+  border-color: #bd93f9;
+  color: #bd93f9;
+}
+
+.ejercicio-barra-nombre {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.ejercicio-barra-nivel {
+  font-size: 0.72rem;
+  background: #bd93f9;
+  color: #1a1a2e;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.ejercicio-contenido {
+  flex: 1;
+}

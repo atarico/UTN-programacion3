@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Playlist de Nicolás — Práctica JS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div>
+      <span class="nivel-badge">📌 Nivel 2</span>
+      <h1>🎧 La Playlist de Nicolás</h1>
+      <p class="subtitulo">Gestión de playlist con estadísticas</p>
+    </div>
+  </header>
+
+  <div class="app-layout">
+    <div class="columna-izq">
+
+      <section class="form-agregar">
+        <h2>Agregar canción</h2>
+        <div class="form-grid">
+          <div class="form-grupo">
+            <label for="input-titulo">Título</label>
+            <input type="text" id="input-titulo" placeholder="Nombre de la canción" />
+          </div>
+          <div class="form-grupo">
+            <label for="input-artista">Artista</label>
+            <input type="text" id="input-artista" placeholder="Nombre del artista" />
+          </div>
+          <div class="form-grupo">
+            <label for="input-duracion">Duración (min)</label>
+            <input type="number" id="input-duracion" placeholder="3.5" min="0" step="0.1" />
+          </div>
+          <div class="form-grupo">
+            <label for="input-genero">Género</label>
+            <select id="input-genero">
+              <option value="Rock">Rock</option>
+              <option value="Pop">Pop</option>
+              <option value="Electronic">Electronic</option>
+              <option value="Hip-Hop">Hip-Hop</option>
+              <option value="Jazz">Jazz</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn-agregar" id="btn-agregar">+ Agregar a la playlist</button>
+      </section>
+
+      <section class="stats-panel">
+        <h2>Estadísticas</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-valor" id="stat-total">0</span>
+            <span class="stat-label">canciones</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-valor" id="stat-duracion">0 min</span>
+            <span class="stat-label">duración total</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-valor" id="stat-genero">-</span>
+            <span class="stat-label">género principal</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="columna-der">
+      <div class="playlist-header">
+        <h2>Lista de reproducción</h2>
+        <span id="orden-info" class="orden-info">Sin ordenar</span>
+      </div>
+      <ul id="lista-playlist" class="lista-playlist">
+        <!-- Generado por JS -->
+      </ul>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    <p>📚 Teoría: spread, filter, findIndex, sort, reduce → <code>04-javascript/README.md</code></p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
