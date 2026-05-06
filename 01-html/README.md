@@ -138,7 +138,34 @@ Cuando se hace click
 El atributo name es crucial para el procesamiento del lado del servidor
 El atributo id es importante para la manipulación de JavaScript y la asociación de etiquetas
 Los atributos type ayudan a definir el comportamiento de los elementos del formulario
-Usar una <label> mejora la usabilidad y accesibilidad del formulario, especialmente para lectores de pantalla
+Usar una `<label>` mejora la usabilidad y accesibilidad del formulario, especialmente para lectores de pantalla
+
+### Validaciones de Formularios
+
+HTML5 proporciona atributos integrados para validar los datos que el usuario ingresa en un formulario antes de enviarlos al servidor. Esto se conoce como validación del lado del cliente.
+
+- `required`: Hace que el campo sea obligatorio. El formulario no se enviará si este campo está vacío.
+- `minlength` y `maxlength`: Especifican la longitud mínima y máxima (en cantidad de caracteres) que debe tener el texto ingresado. Son muy útiles para contraseñas o nombres de usuario.
+- `min` y `max`: Especifican el valor numérico mínimo y máximo permitido. Se usa principalmente con `type="number"`, `type="range"` o `type="date"`.
+- `pattern`: Permite definir una expresión regular (RegEx) que el valor del campo debe cumplir para ser considerado válido (por ejemplo, validar un formato específico de DNI o código postal).
+- `type="email"`, `type="url"`, `type="number"`: Al usar los tipos correctos de input, el navegador ya incluye una validación automática (ej. verificar que un email tenga el formato `texto@dominio.com`).
+
+**Ejemplo de validaciones:**
+
+```html
+<form action="/registro" method="POST">
+  <label for="usuario">Usuario (3-15 caracteres):</label>
+  <input type="text" id="usuario" name="usuario" minlength="3" maxlength="15" required />
+
+  <label for="edad">Edad (entre 18 y 99):</label>
+  <input type="number" id="edad" name="edad" min="18" max="99" required />
+
+  <label for="correo">Correo Electrónico:</label>
+  <input type="email" id="correo" name="correo" required />
+
+  <button type="submit">Registrarse</button>
+</form>
+```
 
 ## 6. Etiquetas Semánticas
 
